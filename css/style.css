@@ -114,4 +114,46 @@ select {
   transform: scale(1.01);
 }
 
+.second-card {
+  width: 30rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: 0.4s;
+  font-family: "Poppins", sans-serif;
+}
+.second-card-img {
+  width: 30rem;
+  border-radius: 0.9rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 2rem;
+}
+.second-card-title {
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.second-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 2rem;
+  border-radius: 0.9rem;
+  color: green;
+  background-color: yellow;
+  text-decoration: none;
+  transition: 0.4s;
+}
+.second-card-link:hover, .second-card-link:focus {
+  color: yellow;
+  background-color: green;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.second-card:hover {
+  transform: scale(1.01);
+}
+
 /*# sourceMappingURL=style.css.map */

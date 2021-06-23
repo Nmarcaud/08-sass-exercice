@@ -1,70 +1,15 @@
 @import 'reset';
+@import 'variables';
+@import 'mixin';
 
-
-// Déclarez au moins 3 variables : largeur de la boite, couleur du bouton, couleur de la police dans le bouton.
-// Variables
-$width-box: 30rem;
-$btn-bg-color:#60A5FA;
-$btn-color: #F3F4F6;
 
 
 // Construisez la boite : largeur,  padding, ombre, ...
 .card {
-    width: $width-box;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-    transition: .4s;
-    font-family: 'Poppins', sans-serif;
-
-    // En utilisant un sélecteur imbriqué, gérez l'apparence de l'image en faisant en sorte qu'elle remplisse toute la largeur de la boîte et que sa hauteur soit fixe, quitte à recadrer. Testez avec des images de tailles différentes.
-    &-img {
-        width: $width-box;
-        border-radius: .9rem;
-        height:20rem;
-        object-fit: cover;
-        object-position: center;
-        margin-bottom: 2rem;
-    }
-
-    // En utilisant un sélecteur imbriqué, définir l'apparence du titre: marge, taille et épaisseur de la police ...
-    &-title {
-        font-family: 'Poppins', sans-serif;
-        margin: 1rem 0;
-        font-size: 2rem;
-        font-weight: 700;
-
-    }
-
-    // Toujours en utilisant un sélecteur imbriqué, définir l'effet du survol du bouton (modifiez la couleur et l'arrière-plan). Faites en sorte que la zone cliquable occupe toute la place du bouton.
-    &-link {
-        display: inline-block;
-        margin-top: 1rem;
-        padding: .6rem 2rem;
-        border-radius: .9rem;
-        color:$btn-color;
-        background-color: $btn-bg-color;
-        
-        text-decoration: none;
-        transition: .4s;
-
-        &:hover,
-        &:focus {
-            color:$btn-bg-color;
-            background-color: $btn-color;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
-    }
-
-    &:hover {
-        transform: scale(1.01);
-    }
+    @include card;
 }
 
-
-
-
-
-
-
+// Je ne comprend pas pourquoi ça ne fonctionne pas !
+.second-card {
+    @include card(40rem, yellow, green);
+}
