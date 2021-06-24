@@ -1,7 +1,7 @@
 //Transformer votre définition en un mixin : il reçoit en paramètre la largeur de la boite et les couleurs pour le bouton. Mettez ce mixin dans un fichier séparé. Redéfinissez vos règles en utilisant ce mixin.
 @mixin card ($width: 30rem, $btn-bg-color:#60A5FA, $btn-color:#F3F4F6) {
      
-    width: $width-box;
+    width: $width;
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -11,7 +11,7 @@
 
     // En utilisant un sélecteur imbriqué, gérez l'apparence de l'image en faisant en sorte qu'elle remplisse toute la largeur de la boîte et que sa hauteur soit fixe, quitte à recadrer. Testez avec des images de tailles différentes.
     &-img {
-        width: $width-box;
+        width: 100%;
         border-radius: .9rem;
         height:20rem;
         object-fit: cover;
